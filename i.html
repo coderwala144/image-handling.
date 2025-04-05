@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="main.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">Navbar</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">Features</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">Pricing</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <div class="box">
+
+        <div class="input">
+
+            <ul>
+
+                <p id="imgid1">lamborghini-huracn </p>
+
+                <p id="imgid2">bentley-continental-gt</p>
+
+                <p id="imgid3">BMW-M5</p>
+
+                <p id="imgid4">Range-Rover-Velar</p>
+
+                <p id="imgid5">Show all</p>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <!--Container1-->
+
+        <div class="row">
+
+            <div class="col">
+
+                <img src="lamborghini-huracn-sterrato_100864334_h.webp" id="img1" class="rounded float-start">
+
+            </div>
+
+
+            <div class="col order-5">
+
+                <img src="bentley-continental-gt-black-car-monochrome-cool-wallpaper-thumb.jpg" id="img2"
+
+                    class="rounded float-end">
+
+            </div>
+
+        </div>
+
+        <!--Container2-->
+
+        <div class="row2">
+
+            <div class="col">
+
+                <img src="Range-Rover-Velar.jpg" id="img3" class="rounded float-start">
+
+            </div>
+
+            <div class="col order-5">
+
+                <img src="images.jpeg" id="img4" class="rounded float-end">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+
+
+
+
+        $(document).ready(function () {
+            //SearchBar 1
+
+            $('#imgid1').click('', function () {
+                $('.col img').hide();
+                $('#img1').show().fadeToggle(500).fadeIn(500);
+            })
+            //SearchBar 2
+            $('#imgid2').click('', function () {
+                $('.col img').hide();
+                $('#img2').show().slideUp('slow').slideDown('slow');
+            })
+            //SearchBar 3
+            $('#imgid4').click('', function () {
+                $('.col img').hide();
+                $('#img3').show().hide(2000).show(2000);
+            })
+            //SearchBar 4
+            $('#imgid3').click('', function () {
+                $('.col img').hide();
+                $('#img4').show().animate({
+
+                    right: '250px',
+                    opacity: 0.5,
+                    height: '40px',
+                    width: '50px',
+
+                }).animate({
+                    transition: '0.9s',
+                    right: '250px',
+                    opacity: 1.0,
+                    height: '320px',
+                    width: '420px',
+
+                });
+            })
+
+            $('#imgid5').click('', function () {
+                $('.col img').show();
+            })
+           
+        });
+    </script>
+</body>
+
+</html>
